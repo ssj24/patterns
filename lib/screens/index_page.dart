@@ -15,10 +15,15 @@ class IndexPage extends StatefulWidget {
 
 class _IndexPageState extends State<IndexPage> {
   List<Pattern> patterns = [
-
+    Pattern(
+      date: DateTime.parse('2024-06-15'),
+      pattern: "TwoTypeCheckPattern",
+      dateWidget: "RightBottomDay",
+    ),
     Pattern(
       date: DateTime.parse('2024-06-01'),
-      pattern: "IrregularDiagonalLinePainter",
+      pattern: "IrregularDiagonalLine",
+      dateWidget: "CenterDate",
     ),
   ];
 
@@ -35,39 +40,7 @@ class _IndexPageState extends State<IndexPage> {
                 for ( var target in patterns )
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Center(
-                        child: Container(
-                            width: 300,
-                            height: 300,
-                            decoration: BoxDecoration(
-                                border: Border.all(
-                                  color: Colors.black,
-                                  width: 3,
-                                )
-                            ),
-                            child: Column(
-                              children: [
-                                Container(
-                                  width: double.infinity,
-                                  color: Colors.black,
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Center(
-                                    child: Text(
-                                      dateFormatter(target.date),
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w900,
-                                        fontSize: 20.0,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                PatternCard(target: target),
-
-                              ],
-                            )
-                        )
-                    ),
+                    child: PatternCard(target: target),
                   )
               ],
             )
