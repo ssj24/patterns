@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:patterns/widgets/pattern_card.dart';
@@ -13,10 +14,18 @@ class IndexPage extends StatefulWidget {
 }
 
 class _IndexPageState extends State<IndexPage> {
-  Pattern target = Pattern(
-    date: DateTime.parse('2024-06-01'),
-    pattern: "IrregularDiagonalLinePainter",
-  );
+  List<Pattern> patterns = [
+    Pattern(
+      date: DateTime.parse('2024-06-15'),
+      pattern: "TwoTypeCheckPattern",
+      dateWidget: "RightBottomDay",
+    ),
+    Pattern(
+      date: DateTime.parse('2024-06-01'),
+      pattern: "IrregularDiagonalLine",
+      dateWidget: "CenterDate",
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -25,41 +34,16 @@ class _IndexPageState extends State<IndexPage> {
         appBar: AppBar(title: Text(widget.title),),
         body: Padding(
           padding: const EdgeInsets.all(24.0),
-          child: Wrap(
-            children: [
-              Center(
-                child: Container(
-                  width: 300,
-                  height: 300,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Colors.black,
-                      width: 3,
-                    )
-                  ),
-                  child: Column(
-                    children: [
-                      Container(
-                        width: double.infinity,
-                        color: Colors.black,
-                        padding: const EdgeInsets.all(8.0),
-                        child: Center(
-                          child: Text(
-                            dateFormatter(target.date),
-                            style: TextStyle(
-                              fontWeight: FontWeight.w900,
-                              fontSize: 20.0,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                      PatternCard(target: target),
-                    ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                for ( var target in patterns )
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: PatternCard(target: target),
                   )
-                ),
-              )
-            ],
+              ],
+            )
           ),
         ),
       ),
