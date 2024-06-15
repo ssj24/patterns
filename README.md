@@ -14,3 +14,4 @@ flutter run
 ## Update
 
 - 20240601: irregular diagonal line
+- 20240615: two type check pattern

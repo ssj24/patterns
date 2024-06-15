@@ -48,16 +48,14 @@ class _PatternCardState extends State<PatternCard> {
                   ),
                 ),
                 Expanded(
-                  child: Container(
-                    child: Stack(
-                        children: [
-                          Center(
-                            child: customPatternPainter,
-                          ),
-                          dateWidget,
-                          // CenterDate(target: widget.target),
-                        ]
-                    ),
+                  child: Stack(
+                      children: [
+                        Center(
+                          child: customPatternPainter,
+                        ),
+                        dateWidget,
+                        // CenterDate(target: widget.target),
+                      ]
                   ),
                 ),
 
