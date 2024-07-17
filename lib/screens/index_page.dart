@@ -1,9 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:patterns/widgets/pattern_card.dart';
 import 'package:patterns/models/patterns.dart';
-import 'package:patterns/services/utils.dart';
+import 'package:patterns/widgets/solar_system.dart';
 
 class IndexPage extends StatefulWidget {
   final String title;
@@ -37,6 +36,7 @@ class _IndexPageState extends State<IndexPage> {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                SolarSystem(),
                 for ( var target in patterns )
                   Padding(
                     padding: const EdgeInsets.all(8.0),

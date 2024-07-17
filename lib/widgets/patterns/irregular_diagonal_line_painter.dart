@@ -1,7 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
-import 'package:patterns/services/utils.dart';
 
 class IrregularDiagonalLinePainter extends CustomPainter {
   @override
@@ -16,7 +15,7 @@ class IrregularDiagonalLinePainter extends CustomPainter {
     // 페인트 객체 생성
     Paint paint = Paint()
       // ..color = getRandomColor().withOpacity(0.3) // 라인 색상
-      ..color = Color(0xffFB8281) // 라인 색상
+      ..color = const Color(0xffFB8281) // 라인 색상
       ..strokeWidth = 1.0; // 라인 두께
     double i = 0.0;
     // 대각선 라인 그리기

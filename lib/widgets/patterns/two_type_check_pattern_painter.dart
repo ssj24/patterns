@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:patterns/services/utils.dart';
 
 class TwoTypeCheckPatternPainter extends CustomPainter {
   @override

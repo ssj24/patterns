@@ -13,7 +13,7 @@ class IrregularDiagonalLine extends StatelessWidget {
     return Stack(
         children: [
           CustomPaint(
-            size: Size(200, 200), // 캔버스 크기
+            size: const Size(200, 200), // 캔버스 크기
             painter: IrregularDiagonalLinePainter(),
           ),
           Positioned(
@@ -23,7 +23,7 @@ class IrregularDiagonalLine extends StatelessWidget {
                 child: Transform.scale(
                   scaleX: 2,
                   scaleY: 3,
-                  child: Text(
+                  child: const Text(
                     '<<<<<',
                     style: TextStyle(
                       // backgroundColor: Colors.white,
@@ -52,7 +52,7 @@ class IrregularDiagonalLine extends StatelessWidget {
                 child: Transform.scale(
                   scaleX: 2,
                   scaleY: 3,
-                  child: Text(
+                  child: const Text(
                     '>>>>>',
                     style: TextStyle(
                       // backgroundColor: Colors.white,

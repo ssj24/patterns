@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-import 'package:patterns/widgets/pattern_card.dart';
 import 'package:patterns/services/utils.dart';
 
 class RightBottomDay extends StatelessWidget {
@@ -24,7 +21,7 @@ class RightBottomDay extends StatelessWidget {
           child: Stack(
             children: [
               Text(dateFormatter(target, option: 1),
-                style: TextStyle(
+                style: const TextStyle(
                   // backgroundColor: Colors.white,
                   fontWeight: FontWeight.w900,
                   fontSize: 40,
@@ -38,7 +35,7 @@ class RightBottomDay extends StatelessWidget {
                 child: RotatedBox(
                   quarterTurns: 3,
                   child: Text(getWeekday(target).substring(0, 1).toUpperCase() + getWeekday(target).substring(1),
-                    style: TextStyle(
+                    style: const TextStyle(
                       // backgroundColor: Colors.white,
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.w900,

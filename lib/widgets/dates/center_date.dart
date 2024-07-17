@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:patterns/widgets/pattern_card.dart';
 import 'package:patterns/services/utils.dart';
-import 'package:patterns/models/patterns.dart';
 
 class CenterDate extends StatelessWidget {
   const CenterDate({
@@ -19,7 +17,7 @@ class CenterDate extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(dateFormatter(target, option: 1),
-            style: TextStyle(
+            style: const TextStyle(
               // backgroundColor: Colors.white,
               fontWeight: FontWeight.w900,
               fontSize: 24,
@@ -34,7 +32,7 @@ class CenterDate extends StatelessWidget {
             ),
           ),
           Text(getWeekday(target).toUpperCase(),
-            style: TextStyle(
+            style: const TextStyle(
               // backgroundColor: Colors.white,
               fontWeight: FontWeight.w900,
               fontSize: 24,

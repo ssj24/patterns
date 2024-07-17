@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:patterns/widgets/patterns/two_type_check_pattern_painter.dart';
 
-import 'irregular_diagonal_line_painter.dart';
 
 class TwoTypeCheckPattern extends StatelessWidget {
   const TwoTypeCheckPattern({
@@ -14,14 +13,14 @@ class TwoTypeCheckPattern extends StatelessWidget {
     return Stack(
         children: [
           CustomPaint(
-            size: Size(200, 200), // 캔버스 크기
+            size: const Size(200, 200), // 캔버스 크기
             painter: TwoTypeCheckPatternPainter(),
           ),
-          Positioned(
+          const Positioned(
               top: 40,
               left: 22,
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   '+',
                   style: TextStyle(
@@ -35,11 +34,11 @@ class TwoTypeCheckPattern extends StatelessWidget {
                 ),
               )
           ),
-          Positioned(
+          const Positioned(
               top: 80,
               left: 10,
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   '+',
                   style: TextStyle(
@@ -53,11 +52,11 @@ class TwoTypeCheckPattern extends StatelessWidget {
                 ),
               )
           ),
-          Positioned(
+          const Positioned(
               top: 100,
               left: 5,
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   '+',
                   style: TextStyle(
@@ -71,11 +70,11 @@ class TwoTypeCheckPattern extends StatelessWidget {
                 ),
               )
           ),
-          Positioned(
+          const Positioned(
               bottom: 14,
               left: 10,
               child: Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   '+',
                   style: TextStyle(

@@ -7,8 +7,8 @@ import 'package:patterns/widgets/dates/center_date.dart';
 import 'package:patterns/widgets/dates/right_bottom_day.dart';
 
 Map<String, Function()> patternMap = {
-  'IrregularDiagonalLine': () => IrregularDiagonalLine(),
-  'TwoTypeCheckPattern': () => TwoTypeCheckPattern(),
+  'IrregularDiagonalLine': () => const IrregularDiagonalLine(),
+  'TwoTypeCheckPattern': () => const TwoTypeCheckPattern(),
 };
 
 Widget getDateWidget(String className, DateTime targetTime) {

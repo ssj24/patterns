@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:patterns/models/patterns.dart';
 import 'package:patterns/services/pattern.dart';
 import '../services/utils.dart';
-import 'dates/center_date.dart';
 
 
 class PatternCard extends StatefulWidget {
@@ -39,7 +38,7 @@ class _PatternCardState extends State<PatternCard> {
                   child: Center(
                     child: Text(
                       dateFormatter(widget.target.date),
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.w900,
                         fontSize: 20.0,
                         color: Colors.white,
