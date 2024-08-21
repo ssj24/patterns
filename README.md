@@ -15,3 +15,4 @@ flutter run
 
 - 20240601: irregular diagonal line
 - 20240615: two type check pattern
+- 20240821: 8 * 10 check pattern

@@ -22,7 +22,7 @@ class _PatternCardState extends State<PatternCard> {
     // CustomPainter? customPatternPainter = classMap[widget.target.pattern]!();
     return Center(
         child: Container(
-            width: 300,
+            width: 200,
             height: 300,
             decoration: BoxDecoration(
                 border: Border.all(
@@ -50,9 +50,7 @@ class _PatternCardState extends State<PatternCard> {
                 Expanded(
                   child: Stack(
                       children: [
-                        Center(
-                          child: customPatternPainter,
-                        ),
+                        customPatternPainter,
                         dateWidget,
                         // CenterDate(target: widget.target),
                       ]
