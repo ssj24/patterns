@@ -9,9 +9,7 @@ class CircleMaskPatternPainter extends CustomPainter {
     Random random = Random();
 
     // 선택 가능한 값 목록
-    List<double> gapValues = [3, 4, 6, 8];
-
-    double gap = gapValues[0]; // 간격
+    List<Color> colorValues = [Colors.purple.shade100, Colors.purple.shade200,Colors.purple.shade300, Colors.purple.shade400, Colors.purple.shade500, Colors.purple.shade600, Colors.purple.shade700, Colors.purple.shade800, Colors.purple.shade900];
 
     // 페인트 객체 생성
     Paint paint = Paint()
@@ -49,35 +47,6 @@ class CircleMaskPatternPainter extends CustomPainter {
     //   // 다음 간격으로 이동
     //   i += gap;
     // }
-    while (i < size.width * 2) {
-      // 랜덤 간격 선택
-      int randomIndex = random.nextInt(gapValues.length);
-      double gap = gapValues[randomIndex];
-      if (i > size.width) {
-        canvas.drawLine(Offset(size.width, i-size.width), Offset(i-size.width, size.height), paint);
-        canvas.drawLine(Offset(0, i-size.width), Offset(size.width - (i-size.width), size.height), paint);
-      }
-      else {
-        canvas.drawLine(Offset(i, 0), Offset(0, i), paint);
-        canvas.drawLine(Offset(size.width - i, 0), Offset(size.width, i), paint);
-      }
-
-
-      // 왼쪽 하단에서 오른쪽 상단으로 그리는 라인
-      // canvas.drawLine(
-      //     Offset(i, size.height),
-      //     Offset(i + gap, size.height - gap),
-      //     paint
-      // );
-      // canvas.drawLine(
-      //     Offset(size.width - i, 0),
-      //     Offset(size.width - (i + gap), gap),
-      //     paint
-      // );
-
-      // 다음 간격으로 이동
-      i += gap;
-    }
   }
 
   @override

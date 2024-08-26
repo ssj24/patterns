@@ -1,4 +1,7 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+import 'package:patterns/widgets/patterns/circle_mask_pattern_painter.dart';
 
 import 'irregular_diagonal_line_painter.dart';
 
@@ -10,63 +13,39 @@ class CircleMaskPattern extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var random = Random();
+
+
+    // 선택 가능한 값 목록
+    List<Color> colorValues = [Colors.purple.shade100, Colors.purple.shade200,Colors.purple.shade300, Colors.purple.shade400, Colors.purple.shade500, Colors.purple.shade600, Colors.purple.shade700, Colors.purple.shade800, Colors.purple.shade900];
+
     return Center(
       child: Stack(
           children: [
             CustomPaint(
-              size: Size(200, 200), // 캔버스 크기
-              painter: IrregularDiagonalLinePainter(),
+              size: Size(200, 300), // 캔버스 크기
+              painter: CircleMaskPatternPainter(),
             ),
-            Positioned(
-                left: 32,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Transform.scale(
-                    scaleX: 2,
-                    scaleY: 3,
-                    child: Text(
-                      '<<<<<',
-                      style: TextStyle(
-                        // backgroundColor: Colors.white,
-                        // fontWeight: FontWeight.w900,
-                          color: Colors.white,
-                          // shadows: <Shadow>[
-                          //   Shadow(
-                          //     offset: Offset(0.0, 0.0),
-                          //     blurRadius: 2.0,
-                          //     color: Color.fromARGB(120, 0, 0, 0),
-                          //   ),
-                          // ],
-                          fontSize: 20,
-                          letterSpacing: 1
-                        // height: 24,
-                      ),
-                    ),
+            ...colorValues.asMap().entries.map((entry) {
+              int index = entry.key;
+              var color = entry.value;
+              double randomWidth = Random().nextDouble() * 30;
+              double randomTop = Random().nextDouble() * 299;
+              double randomLeft = Random().nextDouble() * 199;
+
+              return Positioned(
+                top: randomTop,
+                left: randomLeft,
+                child: Container(
+                  width: randomWidth,
+                  height: randomWidth,
+                  decoration: BoxDecoration(
+                    color: color,
+                    borderRadius: BorderRadius.circular(90)
                   ),
-                )
-            ),
-            Positioned(
-                bottom: 0,
-                right: 32,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Transform.scale(
-                    scaleX: 2,
-                    scaleY: 3,
-                    child: Text(
-                      '>>>>>',
-                      style: TextStyle(
-                        // backgroundColor: Colors.white,
-                        // fontWeight: FontWeight.w900,
-                          color: Colors.white,
-                          fontSize: 20,
-                          letterSpacing: 1
-                        // height: 24,
-                      ),
-                    ),
-                  ),
-                )
-            ),
+                ),
+              );
+            }).toList(),
           ]
       ),
     );
