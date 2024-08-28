@@ -2,9 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:patterns/services/circle_clipper.dart';
-import 'package:patterns/widgets/patterns/circle_mask_pattern_painter.dart';
+import 'package:patterns/widgets/painters/grid_pattern_painter.dart';
 
-import 'irregular_diagonal_line_painter.dart';
+import '../painters/irregular_diagonal_line_painter.dart';
 
 class CircleMaskPattern extends StatelessWidget {
   const CircleMaskPattern({
@@ -33,7 +33,7 @@ class CircleMaskPattern extends StatelessWidget {
                   clipper: CircleClipper(),
                   child: CustomPaint(
                     size: Size(200, 300), // 캔버스 크기
-                    painter: CircleMaskPatternPainter(),
+                    painter: GridPatternPainter(),
                   ),
                 ),
               ),
@@ -48,7 +48,7 @@ class CircleMaskPattern extends StatelessWidget {
                   clipper: CircleClipper(),
                   child: CustomPaint(
                     size: Size(200, 300), // 캔버스 크기
-                    painter: CircleMaskPatternPainter(),
+                    painter: GridPatternPainter(),
                   ),
                 ),
               ),
@@ -63,7 +63,7 @@ class CircleMaskPattern extends StatelessWidget {
                   clipper: CircleClipper(),
                   child: CustomPaint(
                     size: Size(200, 300), // 캔버스 크기
-                    painter: CircleMaskPatternPainter(),
+                    painter: GridPatternPainter(),
                   ),
                 ),
               ),
@@ -78,7 +78,7 @@ class CircleMaskPattern extends StatelessWidget {
                   clipper: CircleClipper(),
                   child: CustomPaint(
                     size: Size(200, 300), // 캔버스 크기
-                    painter: CircleMaskPatternPainter(),
+                    painter: GridPatternPainter(),
                   ),
                 ),
               ),

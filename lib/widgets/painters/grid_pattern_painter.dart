@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:patterns/services/utils.dart';
 
-class CircleMaskPatternPainter extends CustomPainter {
+class GridPatternPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Random random = Random();
