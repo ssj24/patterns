@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'irregular_diagonal_line_painter.dart';
+import '../painters/irregular_diagonal_line_painter.dart';
 
 class IrregularDiagonalLine extends StatelessWidget {
   const IrregularDiagonalLine({

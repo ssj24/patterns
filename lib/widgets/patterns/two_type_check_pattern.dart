@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:patterns/widgets/patterns/two_type_check_pattern_painter.dart';
+import 'package:patterns/widgets/painters/two_type_check_pattern_painter.dart';
 
-import 'irregular_diagonal_line_painter.dart';
+import '../painters/irregular_diagonal_line_painter.dart';
 
 class TwoTypeCheckPattern extends StatelessWidget {
   const TwoTypeCheckPattern({
