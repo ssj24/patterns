@@ -17,3 +17,4 @@ flutter run
 - 20240615: two type check pattern
 - 20240821: 8 * 10 check pattern
 - 20240828: circle mask check pattern
+- 20240824: grid pattern with different opacity and width
