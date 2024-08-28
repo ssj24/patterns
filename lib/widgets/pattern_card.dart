@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:patterns/models/patterns.dart';
 import 'package:patterns/services/pattern.dart';
 import '../services/utils.dart';
-import 'dates/center_date.dart';
 
 
 class PatternCard extends StatefulWidget {
