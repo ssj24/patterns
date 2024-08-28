@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:patterns/services/circle_clipper.dart';
 import 'package:patterns/widgets/patterns/circle_mask_pattern_painter.dart';
 
 import 'irregular_diagonal_line_painter.dart';
@@ -22,9 +23,65 @@ class CircleMaskPattern extends StatelessWidget {
     return Center(
       child: Stack(
           children: [
-            CustomPaint(
-              size: Size(200, 300), // 캔버스 크기
-              painter: CircleMaskPatternPainter(),
+            Positioned(
+              right: 10,
+              top: 5,
+              child: Container(
+                width: 100, // Container width
+                height: 100, // Container height
+                child: ClipPath(
+                  clipper: CircleClipper(),
+                  child: CustomPaint(
+                    size: Size(200, 300), // 캔버스 크기
+                    painter: CircleMaskPatternPainter(),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 100,
+              bottom: -15,
+              child: Container(
+                width: 30, // Container width
+                height: 30, // Container height
+                child: ClipPath(
+                  clipper: CircleClipper(),
+                  child: CustomPaint(
+                    size: Size(200, 300), // 캔버스 크기
+                    painter: CircleMaskPatternPainter(),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 10,
+              top: 100,
+              child: Container(
+                width: 50, // Container width
+                height: 50, // Container height
+                child: ClipPath(
+                  clipper: CircleClipper(),
+                  child: CustomPaint(
+                    size: Size(200, 300), // 캔버스 크기
+                    painter: CircleMaskPatternPainter(),
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              right: 10,
+              bottom: 5,
+              child: Container(
+                width: 15, // Container width
+                height: 15, // Container height
+                child: ClipPath(
+                  clipper: CircleClipper(),
+                  child: CustomPaint(
+                    size: Size(200, 300), // 캔버스 크기
+                    painter: CircleMaskPatternPainter(),
+                  ),
+                ),
+              ),
             ),
             ...colorValues.asMap().entries.map((entry) {
               int index = entry.key;

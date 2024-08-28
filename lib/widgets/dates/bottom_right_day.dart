@@ -32,7 +32,7 @@ class BottomRightDay extends StatelessWidget {
                         // backgroundColor: Colors.white,
                         fontWeight: FontWeight.w900,
                         fontSize: 40,
-                        color: Colors.purple.shade300,
+                        color: Colors.pinkAccent.shade200,
                         height: 1,
                       ),
                     ),
@@ -46,7 +46,7 @@ class BottomRightDay extends StatelessWidget {
                         fontStyle: FontStyle.italic,
                         fontWeight: FontWeight.w900,
                         fontSize: 40,
-                        color: Colors.purple.shade300,
+                        color: Colors.pinkAccent.shade200,
                         height: 1,
                       ),),
                   )
