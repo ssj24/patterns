@@ -16,5 +16,6 @@ flutter run
 - 20240601: irregular diagonal line
 - 20240615: two type check pattern
 - 20240821: 8 * 10 check pattern
-- 20240828: circle mask check pattern
-- 20240824: grid pattern with different opacity and width
+- 20240822: circle mask check pattern
+- 20240828: grid pattern with different opacity and width
+- 20240829: heart mask with outline
