@@ -5,14 +5,17 @@ import 'package:patterns/widgets/patterns/irregular_diagonal_line.dart';
 import 'package:patterns/widgets/patterns/two_type_check_pattern.dart';
 import 'package:patterns/widgets/patterns/circle_mask_pattern.dart';
 import 'package:patterns/widgets/patterns/opacity_grid_pattern.dart';
+import 'package:patterns/widgets/patterns/heart_mask_check_pattern.dart';
 
 import 'package:patterns/widgets/dates/center_date.dart';
 import 'package:patterns/widgets/dates/center_month.dart';
 import 'package:patterns/widgets/dates/right_bottom_day.dart';
 import 'package:patterns/widgets/dates/header_date.dart';
 import 'package:patterns/widgets/dates/bottom_right_day.dart';
+import 'package:patterns/widgets/dates/pattern_center_date.dart';
 
 Map<String, Function()> patternMap = {
+  'HeartMaskCheckPattern': () => HeartMaskCheckPattern(),
   'OpacityGridPattern': () => OpacityGridPattern(),
   'CircleMaskPattern': () => CircleMaskPattern(),
   'IrregularDiagonalLine': () => IrregularDiagonalLine(),
@@ -26,6 +29,8 @@ Widget getDateWidget(String className, DateTime targetTime) {
       return CenterDate(target: targetTime);
     case 'CenterMonth':
       return CenterMonth(target: targetTime, targetColor: Colors.pink.shade600);
+    case 'PatternCenterDate':
+      return PatternCenterDate(target: targetTime, targetColor: Colors.deepOrange.shade600);
     case 'RightBottomDay':
       return RightBottomDay(target: targetTime);
     case 'HeaderDate':
