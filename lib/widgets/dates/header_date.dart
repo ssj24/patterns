@@ -8,9 +8,11 @@ class HeaderDate extends StatelessWidget {
   const HeaderDate({
     super.key,
     required this.target,
+    required this.targetColor,
   });
 
   final DateTime target;
+  final MaterialAccentColor targetColor;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class HeaderDate extends StatelessWidget {
               height: 15,
               // color: Colors.red,
                 decoration: BoxDecoration(
-                  border: Border(bottom: BorderSide(width: 2.0, color: Colors.orangeAccent.shade200))
+                  border: Border(bottom: BorderSide(width: 2.0, color: targetColor.shade200))
                 ),
             ),
             Padding(
@@ -35,7 +37,7 @@ class HeaderDate extends StatelessWidget {
                 height: 20,
                 // color: Colors.red,
                 decoration: BoxDecoration(
-                    border: Border(right: BorderSide(width: 2.0, color: Colors.orangeAccent.shade200))
+                    border: Border(right: BorderSide(width: 2.0, color: targetColor.shade200))
                 ),
               ),
             ),
@@ -52,7 +54,7 @@ class HeaderDate extends StatelessWidget {
               height: 10,
               // color: Colors.red,
               decoration: BoxDecoration(
-                  border: Border(bottom: BorderSide(color: Colors.orangeAccent.shade200))
+                  border: Border(bottom: BorderSide(color: targetColor.shade200))
               ),
             ),
             Padding(
@@ -62,7 +64,7 @@ class HeaderDate extends StatelessWidget {
                 height: 10,
                 // color: Colors.red,
                 decoration: BoxDecoration(
-                    border: Border(right: BorderSide(color: Colors.orangeAccent.shade100))
+                    border: Border(right: BorderSide(color: targetColor.shade100))
                 ),
               ),
             ),
@@ -79,7 +81,7 @@ class HeaderDate extends StatelessWidget {
               height: 20,
               // color: Colors.red,
               decoration: BoxDecoration(
-                  border: Border(bottom: BorderSide(width: 2, color: Colors.orangeAccent.shade200))
+                  border: Border(bottom: BorderSide(width: 2, color: targetColor.shade200))
               ),
             ),
             Padding(
@@ -89,7 +91,7 @@ class HeaderDate extends StatelessWidget {
                 height: 16,
                 // color: Colors.red,
                 decoration: BoxDecoration(
-                    border: Border(right: BorderSide(width: 2, color: Colors.orangeAccent.shade200))
+                    border: Border(right: BorderSide(width: 2, color: targetColor.shade200))
                 ),
               ),
             ),
@@ -110,7 +112,7 @@ class HeaderDate extends StatelessWidget {
                   // backgroundColor: Colors.white,
                   fontWeight: FontWeight.w900,
                   fontSize: 36,
-                  color: Colors.orangeAccent.shade200,
+                  color: targetColor.shade200,
                 ),
               ),
             ),
@@ -120,7 +122,7 @@ class HeaderDate extends StatelessWidget {
                 // backgroundColor: Colors.white,
                 fontWeight: FontWeight.w900,
                 fontSize: 20,
-                color: Colors.orangeAccent.shade200,
+                color: targetColor.shade200,
               ),
             ),
             Text(
@@ -129,7 +131,7 @@ class HeaderDate extends StatelessWidget {
                 // backgroundColor: Colors.white,
                 fontWeight: FontWeight.w900,
                 fontSize: 20,
-                color: Colors.orangeAccent.shade200,
+                color: targetColor.shade200,
               ),
             )
           ],
