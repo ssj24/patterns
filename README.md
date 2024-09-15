@@ -19,3 +19,4 @@ flutter run
 - 20240822: circle mask check pattern
 - 20240828: grid pattern with different opacity and width
 - 20240829: heart mask with outline
+- 20240915: plaid pattern

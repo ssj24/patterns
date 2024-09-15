@@ -13,8 +13,10 @@ import 'package:patterns/widgets/dates/right_bottom_day.dart';
 import 'package:patterns/widgets/dates/header_date.dart';
 import 'package:patterns/widgets/dates/bottom_right_day.dart';
 import 'package:patterns/widgets/dates/pattern_center_date.dart';
+import 'package:patterns/widgets/patterns/plaid_pattern.dart';
 
 Map<String, Function()> patternMap = {
+  'PlaidPattern': () => PlaidPattern(),
   'HeartMaskCheckPattern': () => HeartMaskCheckPattern(),
   'OpacityGridPattern': () => OpacityGridPattern(),
   'CircleMaskPattern': () => CircleMaskPattern(),
@@ -34,7 +36,9 @@ Widget getDateWidget(String className, DateTime targetTime) {
     case 'RightBottomDay':
       return RightBottomDay(target: targetTime);
     case 'HeaderDate':
-      return HeaderDate(target: targetTime);
+      return HeaderDate(target: targetTime, targetColor: Colors.orangeAccent);
+    case 'PurpleHeaderDate':
+      return HeaderDate(target: targetTime, targetColor: Colors.deepPurpleAccent);
     case 'BottomRightDay':
       return BottomRightDay(target: targetTime);
     default:
