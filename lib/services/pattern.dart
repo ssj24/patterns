@@ -6,6 +6,8 @@ import 'package:patterns/widgets/patterns/two_type_check_pattern.dart';
 import 'package:patterns/widgets/patterns/circle_mask_pattern.dart';
 import 'package:patterns/widgets/patterns/opacity_grid_pattern.dart';
 import 'package:patterns/widgets/patterns/heart_mask_check_pattern.dart';
+import 'package:patterns/widgets/patterns/plaid_pattern.dart';
+import 'package:patterns/widgets/patterns/rough_circle.dart';
 
 import 'package:patterns/widgets/dates/center_date.dart';
 import 'package:patterns/widgets/dates/center_month.dart';
@@ -13,9 +15,10 @@ import 'package:patterns/widgets/dates/right_bottom_day.dart';
 import 'package:patterns/widgets/dates/header_date.dart';
 import 'package:patterns/widgets/dates/bottom_right_day.dart';
 import 'package:patterns/widgets/dates/pattern_center_date.dart';
-import 'package:patterns/widgets/patterns/plaid_pattern.dart';
+import 'package:patterns/widgets/dates/center_filled_date.dart';
 
 Map<String, Function()> patternMap = {
+  'RoughCircle': () => RoughCircle(),
   'PlaidPattern': () => PlaidPattern(),
   'HeartMaskCheckPattern': () => HeartMaskCheckPattern(),
   'OpacityGridPattern': () => OpacityGridPattern(),
@@ -29,6 +32,8 @@ Widget getDateWidget(String className, DateTime targetTime) {
   switch (className) {
     case 'CenterDate':
       return CenterDate(target: targetTime);
+    case 'CenterFilledDate':
+      return CenterFilledDate(target: targetTime, targetColor: Colors.deepOrange);
     case 'CenterMonth':
       return CenterMonth(target: targetTime, targetColor: Colors.pink.shade600);
     case 'PatternCenterDate':
