@@ -16,6 +16,11 @@ class IndexPage extends StatefulWidget {
 class _IndexPageState extends State<IndexPage> {
   List<Pattern> patterns = [
     Pattern(
+      date: DateTime.parse('2024-09-17'),
+      pattern: "RoughLine",
+      dateWidget: "BottomLeftDate",
+    ),
+    Pattern(
       date: DateTime.parse('2024-09-16'),
       pattern: "RoughCircle",
       dateWidget: "CenterFilledDate",

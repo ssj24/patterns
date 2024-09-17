@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:patterns/widgets/dates/bottom_left_date.dart';
 
 import 'package:patterns/widgets/patterns/check_pattern_8_by_10.dart';
 import 'package:patterns/widgets/patterns/irregular_diagonal_line.dart';
+import 'package:patterns/widgets/patterns/rough_line.dart';
 import 'package:patterns/widgets/patterns/two_type_check_pattern.dart';
 import 'package:patterns/widgets/patterns/circle_mask_pattern.dart';
 import 'package:patterns/widgets/patterns/opacity_grid_pattern.dart';
@@ -19,6 +21,7 @@ import 'package:patterns/widgets/dates/center_filled_date.dart';
 
 Map<String, Function()> patternMap = {
   'RoughCircle': () => RoughCircle(),
+  'RoughLine': () => RoughLine(),
   'PlaidPattern': () => PlaidPattern(),
   'HeartMaskCheckPattern': () => HeartMaskCheckPattern(),
   'OpacityGridPattern': () => OpacityGridPattern(),
@@ -46,6 +49,8 @@ Widget getDateWidget(String className, DateTime targetTime) {
       return HeaderDate(target: targetTime, targetColor: Colors.deepPurpleAccent);
     case 'BottomRightDay':
       return BottomRightDay(target: targetTime);
+    case 'BottomLeftDate':
+      return BottomLeftDate(target: targetTime);
     default:
       throw Exception('Unsupported class name: $className');
   }
